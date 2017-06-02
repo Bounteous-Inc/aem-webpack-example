@@ -6,7 +6,7 @@ The structure of this project mirrors Adobe's [Project Archetype](https://github
 
 ## Integrate Webpack into AEM
 
-Here's a step-by-step summary. Each step links to a folder that contains a README file with more instructions.
+Here's a step-by-step summary. Each step links to a folder containing a **README** file with more instructions. Make sure you read those for detailed instructions of each aspect.
 
 1. [Copy the example Webpack folder](ui.apps/src/main) to `ui.apps/src/main`.
 2. [Copy .babelrc and .eslintrc](ui.apps/src/main) to `ui.apps/src/main`.

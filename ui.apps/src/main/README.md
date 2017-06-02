@@ -1,6 +1,6 @@
 # Webpack folder
 
-Copy the whole Webpack folder into your project. It contains basic configurations for npm/Yarn, Webpack, Babel and Jest.
+Copy the whole `webpack` folder into your project. It contains basic configurations for npm/Yarn, Webpack, Babel and Jest.
 
 Note that webpack.config.js defines the entry points for Webpack:
 
@@ -15,9 +15,9 @@ You can extend this array and reference additional JavaScript files with a confi
 
 # Babel (.babelrc) and ESLint (.eslintrc)
 
-Placing .babelrc and .eslintrc in a parent/ancestor folder of the content folder, we avoid errors that occur while files in the content folder are processed by Babel/ESLint.
+By placing .babelrc and .eslintrc in a parent/ancestor folder of the content folder, we avoid errors potentially occuring while files in the content folder are processed by Babel/ESLint.
 
-The linting rules defined in .eslintrc are not very strict which allows you to integrate the Webpack setup more easily into your existing project. However, we recommend to make the rules more strict – as strict as possible.
+The linting rules defined in .eslintrc are pretty loose on purpose for this example. It allows you to integrate the Webpack setup more easily into your existing project. However, we recommend to make the rules more strict – as strict as possible.
 
 If you want to define global variables (variables that are available across various processed JavaScript files), define them in .eslintrc ([documentation](http://eslint.org/docs/user-guide/configuring#specifying-globals)). One popular global variable is `$` (for jQuery).
 
