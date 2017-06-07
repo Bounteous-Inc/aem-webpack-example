@@ -8,7 +8,7 @@ AEM might be the best system for content and user experience management. It prov
 
 However, your front-end developers are probably not be happy with it and waste precious time. Why? AEM's out-of-the-box tools can't keep up with the rapid advances in the front-end world.
 
-![Front-end development in AEM](https://cdn.meme.am/cache/instances/folder530/500x/66079530/gladiator-adobe-experience-manager-are-you-not-entertained.jpg)
+![Front-end development in AEM](https://i.imgur.com/vKwoLvU.jpg)
 
 **Webpack in AEM improves front-end development because...**
 
@@ -20,7 +20,7 @@ However, your front-end developers are probably not be happy with it and waste p
 
 **Let's make AEM fun for everyone.**
 
-![Make AEM fun again](https://cdn.meme.am/cache/instances/folder817/500x/65833817/spongebob-rainbow-adobe-experience-manager.jpg)
+![Make AEM fun again](https://i.imgur.com/t37OlGq.jpg)
 
 ## Integrate Webpack into AEM
 
