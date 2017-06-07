@@ -1,6 +1,6 @@
 # AEM Webpack Example
 
-This project demonstrates a proven practice for setting up Webpack in AEM. It provides a straightforward Webpack configuration and supports Babel and ESLint. It is part of the setup [Infield Digital](http://www.infielddigital.com/) introduced to some major AEM customers.
+This project demonstrates a proven practice for setting up Webpack in AEM. It provides a straightforward Webpack configuration and supports Babel, ESLint and JavaScript testing. It is part of the setup [Infield Digital](http://www.infielddigital.com/) introduced to some major AEM customers.
 
 ## Why Webpack in AEM?
 
