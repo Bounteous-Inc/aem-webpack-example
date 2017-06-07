@@ -2,9 +2,29 @@
 
 This project demonstrates a proven practice for setting up Webpack in AEM. It provides a straightforward Webpack configuration and supports Babel and ESLint.
 
-The structure of this project mirrors Adobe's [Project Archetype](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype/tree/master/src/main/archetype). To get started, you can either [set up a new project](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype) using the archetype, or you use your existing project. Then...
+## Why Webpack in AEM?
+
+AEM might be the best system for content and user experience management. It provides reliable tools that power [some](http://store.nike.com/) [of](https://aws.amazon.com/) [the](https://www.chase.com/) [biggest](https://www.salesforce.com/) websites and that Java developers enjoy working with.
+
+However, your front-end developers are probably not be happy with it and waste precious time. Why? AEM's out-of-the-box tools can't keep up with the rapid advances in the front-end world.
+
+![Front-end development in AEM](https://cdn.meme.am/cache/instances/folder530/500x/66079530/gladiator-adobe-experience-manager-are-you-not-entertained.jpg)
+
+**Webpack in AEM improves front-end development because...**
+
+- It allows using the latest JavaScript standards _without_ breaking clientlibs and AEM's built-in YUI compressor.
+- It promotes modular and reusable code. You can import modules, variables and files using JavaScript and tie it to an AEM component. This results in code that's easier to maintain, which saves time and _$$$_.
+- It can be extended easily and supports the integration of [~500.000](http://www.modulecounts.com/) npm modules.
+- It can automatically prefix CSS for better cross-browser compatibility, ensure consistent code style, and automate most tasks you can think of.
+- It even allows writing tests for JavaScript.
+
+**Let's make AEM fun for everyone.**
+
+![Make AEM fun again](https://cdn.meme.am/cache/instances/folder817/500x/65833817/spongebob-rainbow-adobe-experience-manager.jpg)
 
 ## Integrate Webpack into AEM
+
+The structure of this project mirrors Adobe's [Project Archetype](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype/tree/master/src/main/archetype). To get started, you can either [set up a new project](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype) using the archetype, or you use your existing project. Then...
 
 Here's a step-by-step summary. Each step links to a folder containing a **README** file with more instructions. Make sure you read those for detailed instructions of each aspect.
 
