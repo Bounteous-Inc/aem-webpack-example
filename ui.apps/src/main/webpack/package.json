@@ -1,0 +1,40 @@
+{
+  "name": "webpack-core",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Core front end setup from a project",
+  "scripts": {
+    "build": "webpack --config internals/webpack.config.js",
+    "build:watch": "yarn run build -- --watch",
+    "deploy": "yarn run build -- -p",
+    "test": "jest --config ./internals/jest.config.js --coverage",
+    "test:debug": "yarn run test -- --no-cache",
+    "test:watch": "yarn run test -- --watch",
+    "start": "npm-run-all --parallel test:watch build:watch"
+  },
+  "author": "Infield Digital",
+  "license": "GPL-3",
+  "devDependencies": {
+    "autoprefixer": "^6.6.1",
+    "babel-core": "^6.18.0",
+    "babel-jest": "^20.0.0",
+    "babel-loader": "^6.2.7",
+    "babel-preset-latest": "^6.16.0",
+    "css-loader": "^0.26.1",
+    "eslint": "^3.15.0",
+    "eslint-loader": "^1.6.1",
+    "extract-text-webpack-plugin": "2.0.0",
+    "jest": "^19.0.2",
+    "jest-cli": "^19.0.2",
+    "node-sass": "^4.1.1",
+    "npm-run-all": "^4.0.2",
+    "postcss-loader": "^1.2.1",
+    "postcss-smart-import": "^0.6.6",
+    "sass-loader": "^6.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.5.1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.23.0"
+  }
+}
