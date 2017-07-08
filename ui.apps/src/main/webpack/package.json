@@ -6,10 +6,10 @@
   "scripts": {
     "build": "webpack --config internals/webpack.config.js",
     "build:watch": "yarn run build -- --watch",
-    "deploy": "yarn run build -- -p",
+    "deploy": "NODE_ENV='production' yarn run build -- -p",
     "postinstall": "npm rebuild node-sass",
-    "test": "jest --config ./internals/jest.config.js --coverage",
-    "test:debug": "yarn run test -- --no-cache",
+    "test": "NODE_ENV=test jest --config ./internals/jest.config.js",
+    "test:debug": "BABEL_DISABLE_CACHE=1 yarn run test -- --no-cache",
     "test:watch": "yarn run test -- --watch",
     "start": "npm-run-all --parallel test:watch build:watch"
   },
