@@ -7,6 +7,7 @@
     "build": "webpack --config internals/webpack.config.js",
     "build:watch": "yarn run build -- --watch",
     "deploy": "yarn run build -- -p",
+    "postinstall": "npm rebuild node-sass",
     "test": "jest --config ./internals/jest.config.js --coverage",
     "test:debug": "yarn run test -- --no-cache",
     "test:watch": "yarn run test -- --watch",
