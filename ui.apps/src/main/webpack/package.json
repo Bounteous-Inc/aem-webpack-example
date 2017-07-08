@@ -37,23 +37,5 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0"
-  },
-  "babel": {
-    "presets": [
-      [
-        "latest",
-        {
-          "es2015": {
-            "modules": false
-          },
-          "es2016": {
-            "modules": false
-          },
-          "es2017": {
-            "modules": false
-          }
-        }
-      ]
-    ]
   }
 }
