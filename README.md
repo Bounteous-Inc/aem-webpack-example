@@ -29,7 +29,7 @@ The structure of this project mirrors Adobe's [Project Archetype](https://github
 Here's a step-by-step summary. Each step links to a folder containing a **README** file with more instructions. Make sure you read those for detailed instructions of each aspect.
 
 1. [Copy the example Webpack folder](ui.apps/src/main) to `ui.apps/src/main`.
-2. [Copy .eslintrc](ui.apps/src/main) to `ui.apps/src/main`.
+2. [Copy .eslintrc.js](ui.apps/src/main) to `ui.apps/src/main`.
 3. [Extend the project's pom.xml](ui.apps).
 
 This is already enough to run the project's Maven build and Webpack. Try it now! Then you want to modify a few more things:
