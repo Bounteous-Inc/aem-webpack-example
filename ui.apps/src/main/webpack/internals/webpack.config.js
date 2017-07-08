@@ -54,7 +54,6 @@ module.exports = {
         use: [{
           loader: 'css-loader'
         }, {
-          //// We COULD use postcss-loader but that would increase CSS file size significantly
           loader: 'postcss-loader'
         }, {
           loader: 'sass-loader'
@@ -72,7 +71,6 @@ module.exports = {
     new webpack.LoaderOptionsPlugin({
       options: {
         postcss: [
-          require('postcss-smart-import'),
           require('autoprefixer')
         ],
         context: '/'

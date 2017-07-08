@@ -2,9 +2,10 @@
   "name": "webpack-core",
   "version": "1.0.0",
   "private": true,
-  "description": "Core front end setup from a project",
+  "description": "Core front end setup of a project",
   "scripts": {
     "build": "webpack --config internals/webpack.config.js",
+    "build:debug": "BABEL_DISABLE_CACHE=1 yarn run build",
     "build:watch": "yarn run build -- --watch",
     "deploy": "NODE_ENV='production' yarn run build -- -p",
     "postinstall": "npm rebuild node-sass",
@@ -21,7 +22,7 @@
     "babel-loader": "^6.2.7",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
     "babel-preset-jest": "^20.0.3",
-    "babel-preset-latest": "^6.16.0",
+    "babel-preset-latest": "^6.24.1",
     "css-loader": "^0.26.1",
     "eslint": "^3.15.0",
     "eslint-loader": "^1.9.0",
@@ -31,7 +32,6 @@
     "node-sass": "^4.1.1",
     "npm-run-all": "^4.0.2",
     "postcss-loader": "^1.2.1",
-    "postcss-smart-import": "^0.6.6",
     "sass-loader": "^6.0.2",
     "webpack": "^2.5.1"
   },
