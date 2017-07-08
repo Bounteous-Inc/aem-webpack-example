@@ -71,9 +71,12 @@ module.exports = {
     new webpack.LoaderOptionsPlugin({
       options: {
         postcss: [
-          require('autoprefixer')
+          require('stylelint')({
+            fix: true,
+          }),
+          require('autoprefixer'),
         ],
-        context: '/'
+        context: '/',
       }
     })
   ],
