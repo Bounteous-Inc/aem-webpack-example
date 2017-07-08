@@ -1,8 +1,10 @@
 // https://webpack.js.org/guides/dependency-management/#require-context
-var cache = {};
+let cache = {};
 
 function importAll(r) {
-  r.keys().forEach(key => cache[key] = r(key));
+    r.keys().forEach((key) => {
+        return cache[key] = r(key);
+    });
 }
 
 // Include all files named "index.js" in a "webpack.modules/" folder.

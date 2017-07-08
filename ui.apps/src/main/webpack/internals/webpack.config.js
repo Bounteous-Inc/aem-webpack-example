@@ -37,25 +37,28 @@ module.exports = {
     rules: [{
       test: /\.js$/,
       exclude: /node_modules/,
-      loader: 'babel-loader', // the -loader suffix is no longer optional in Webpack 2 (so you can't use just 'babel')
-      options: {
-        presets: [
-          // 'require.resolve' is a workaround, see https://github.com/babel/babel-loader/issues/166#issuecomment-160866946
-          require.resolve('babel-preset-latest')
-        ]
-      }
+      use: [{
+        loader: 'babel-loader'
+      }, {
+        loader: 'eslint-loader',
+        options: {
+          // This option makes ESLint automatically fix minor issues
+          fix: true,
+        },
+      }],
     }, {
-      test: /\.css$/,
+      // The "?" allows you use both file formats: .css and .scss
+      test: /\.s?css$/,
       exclude: /node_modules/,
-      loader: 'css-loader?sourceMap'
-    }, {
-      test: /\.scss$/,
-      exclude: /node_modules/,
-      loader: extractCSS.extract({
-        fallback: 'style-loader?sourceMap',
-        use: 'css-loader?importLoaders=1!sass-loader?sourceMap'
-        //// We COULD use postcss-loader but that would increase CSS file size significantly
-        // loader: 'css-loader?importLoaders=1!postcss-loader?sourceMap=inline!sass-loader?sourceMap'
+      use: ExtractTextPlugin.extract({
+        use: [{
+          loader: 'css-loader'
+        }, {
+          //// We COULD use postcss-loader but that would increase CSS file size significantly
+          loader: 'postcss-loader'
+        }, {
+          loader: 'sass-loader'
+        }]
       })
     }]
   },
