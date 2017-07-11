@@ -40,9 +40,9 @@ This is already enough to run the project's Maven build and Webpack. Try it now!
 
 ## Toolbox
 
-This setup comes with a bunch of tools that work out-of-the-box:
+AEM Webpack Example supports the following tools out-of-the-box:
 
-- Maven-integration using [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin).
+- Maven integration using [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin).
 - Webpack.
 - SCSS.
 - Babel. JavaScript compilation using Babel's recommended [env preset](http://babeljs.io/docs/plugins/preset-env/).
