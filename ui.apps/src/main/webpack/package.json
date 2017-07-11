@@ -30,7 +30,7 @@
     "jest": "^20.0.4",
     "jest-cli": "^20.0.4",
     "node-sass": "^4.1.1",
-    "postcss-loader": "^1.2.1",
+    "postcss-loader": "^2.0.6",
     "sass-loader": "^6.0.2",
     "stylelint": "^7.12.0",
     "ttab": "^0.6.0",
@@ -40,7 +40,9 @@
     "babel-polyfill": "^6.23.0"
   },
   "jest": {
-    "roots": ["../content/jcr_root/"],
+    "roots": [
+      "../content/jcr_root/"
+    ],
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.js$",
     "transform": {
       "^.+\\.js$": "./internals/jest.preprocessor.js"

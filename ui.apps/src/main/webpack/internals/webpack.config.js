@@ -56,7 +56,15 @@ module.exports = {
         }, {
           loader: 'sass-loader'
         }, {
-          loader: 'postcss-loader'
+          loader: 'postcss-loader',
+          options: {
+            plugins: (loader) => [
+              require('stylelint')({
+                fix: true,
+              }),
+              require('autoprefixer'),
+            ],
+          },
         }]
       })
     }]
@@ -67,18 +75,7 @@ module.exports = {
     path: outputPath
   },
   plugins: [
-    extractCSS,
-    new webpack.LoaderOptionsPlugin({
-      options: {
-        postcss: [
-          require('stylelint')({
-            fix: true,
-          }),
-          require('autoprefixer'),
-        ],
-        context: '/',
-      }
-    })
+    extractCSS
   ],
   // If your node_modules folder is not in a parent folder of all source files, webpack cannot find the loader. That's shy we have to set an absolute path using the resolveLoader.root option.
   resolve: {
