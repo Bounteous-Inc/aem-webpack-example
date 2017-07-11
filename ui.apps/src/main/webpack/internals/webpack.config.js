@@ -75,7 +75,7 @@ module.exports = {
     path: outputPath
   },
   plugins: [
-    extractCSS
+    extractCSS,
   ],
   // If your node_modules folder is not in a parent folder of all source files, webpack cannot find the loader. That's shy we have to set an absolute path using the resolveLoader.root option.
   resolve: {
