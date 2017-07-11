@@ -54,9 +54,9 @@ module.exports = {
         use: [{
           loader: 'css-loader'
         }, {
-          loader: 'postcss-loader'
-        }, {
           loader: 'sass-loader'
+        }, {
+          loader: 'postcss-loader'
         }]
       })
     }]
