@@ -1,4 +1,4 @@
-{
+module.exports = {
   "env": {
     "browser": true,
     "es6": true,
@@ -12,9 +12,6 @@
   "parserOptions": {
     "ecmaVersion": 8,
     "sourceType": "module",
-    "ecmaFeatures": {
-      "modules": true
-    }
   },
   "rules": {
     "no-console": "off",
@@ -22,4 +19,4 @@
     "quotes": ["error", "single"],
     "semi": 2
   }
-}
+};

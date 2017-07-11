@@ -2,39 +2,41 @@
   "name": "webpack-core",
   "version": "1.0.0",
   "private": true,
-  "description": "Core front end setup from a project",
+  "description": "Core front end setup of a project",
   "scripts": {
     "build": "webpack --config internals/webpack.config.js",
-    "build:watch": "yarn run build -- --watch",
-    "deploy": "yarn run build -- -p",
-    "test": "jest --config ./internals/jest.config.js --coverage",
-    "test:debug": "yarn run test -- --no-cache",
-    "test:watch": "yarn run test -- --watch",
-    "start": "npm-run-all --parallel test:watch build:watch"
+    "build:debug": "BABEL_DISABLE_CACHE=1 npm run build",
+    "build:watch": "npm run build -- --watch",
+    "deploy": "NODE_ENV='production' npm run build -- -p",
+    "postinstall": "npm rebuild node-sass",
+    "test": "NODE_ENV=test jest --config ./internals/jest.config.js",
+    "test:debug": "BABEL_DISABLE_CACHE=1 npm run test -- --no-cache",
+    "test:watch": "npm run test -- --watch",
+    "start": "ttab -w exec npm run test:watch && npm run build:watch"
   },
   "author": "Infield Digital",
   "license": "GPL-3",
   "devDependencies": {
-    "autoprefixer": "^6.6.1",
     "babel-core": "^6.18.0",
-    "babel-jest": "^20.0.0",
-    "babel-loader": "^6.2.7",
-    "babel-preset-latest": "^6.16.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-jest": "^20.0.3",
     "css-loader": "^0.26.1",
     "eslint": "^3.15.0",
-    "eslint-loader": "^1.6.1",
-    "extract-text-webpack-plugin": "2.0.0",
+    "eslint-loader": "^1.9.0",
+    "extract-text-webpack-plugin": "^2.1.2",
     "jest": "^19.0.2",
     "jest-cli": "^19.0.2",
     "node-sass": "^4.1.1",
-    "npm-run-all": "^4.0.2",
     "postcss-loader": "^1.2.1",
-    "postcss-smart-import": "^0.6.6",
     "sass-loader": "^6.0.2",
-    "style-loader": "^0.13.1",
-    "webpack": "^2.5.1"
+    "stylelint": "^7.12.0",
+    "ttab": "^0.6.0",
+    "webpack": "^3.1.0"
   },
   "dependencies": {
+    "autoprefixer": "^7.1.2",
     "babel-polyfill": "^6.23.0"
   }
 }
