@@ -1,5 +1,5 @@
 // https://webpack.js.org/guides/dependency-management/#require-context
-let cache = {};
+const cache = {};
 
 function importAll(r) {
     r.keys().forEach((key) => {

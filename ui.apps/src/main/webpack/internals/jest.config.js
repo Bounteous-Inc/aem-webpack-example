@@ -1,7 +1,7 @@
 {
   "roots": ["../content/jcr_root/"],
-  "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(js|jsx)$",
+  "testRegex": "(/__tests__/.*|\\.(test|spec))\\.js$",
   "transform": {
-    "^.+\\.jsx?$": "./internals/jest.preprocessor.js"
+    "^.+\\.js$": "./internals/jest.preprocessor.js"
   }
 }
