@@ -14,6 +14,8 @@ const NODE_MODULES = path.join(__dirname, '../node_modules');
 const libraryName = 'Project_Component_Library'; // Variable name (no white space)
 const outputPath = path.resolve(__dirname, '../../content/jcr_root/etc/designs/webpack.bundles');
 
+const IS_PROD = (process.env.NODE_ENV === 'production');
+
 /*
  * Here we can add as many entry files as we want. One entry results in one output file.
  * <id>: Defines how the target file is named, e.g. 'main' results in 'main.bundle.js'.
@@ -43,7 +45,7 @@ module.exports = {
         loader: 'eslint-loader',
         options: {
           // This option makes ESLint automatically fix minor issues
-          fix: true,
+          fix: !IS_PROD,
         },
       }],
     }, {
@@ -56,12 +58,19 @@ module.exports = {
         }, {
           loader: 'postcss-loader',
           options: {
-            plugins: (loader) => [
-              require('stylelint')({
-                fix: true,
-              }),
-              require('autoprefixer'),
-            ],
+            plugins: (loader) => {
+              const plugins = [
+                require('autoprefixer')
+              ];
+
+              if (!IS_PROD) {
+                plugins.push(require('stylelint')({
+                  fix: true,
+                }))
+              }
+
+              return plugins;
+            },
           },
         }, {
           loader: 'sass-loader'
