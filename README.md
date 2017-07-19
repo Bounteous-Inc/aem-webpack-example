@@ -51,6 +51,16 @@ AEM Webpack Example supports the following tools out-of-the-box:
 - Autoprefixer. Prefixes CSS/SCSS to improve cross-browser compatibility.
 - Jest. Testing for JavaScript.
 
+## Demo
+
+Video summary:
+
+* Automatically watch to JavaScript and SCSS changes using script `npm run build:watch`
+* See what happens if CSS violates a Stylelint rule
+* See what Autoprefixer does to your CSS
+
+[![Webpack in use](http://infielddigital.com/shared/aem-webpack-example-demo-thumbnail.jpg)](http://infielddigital.com/shared/aem-webpack-example-demo.mov)
+
 ## Tips
 
 - Speed up development using [AEM Front](https://www.npmjs.com/package/aem-front). If used, Webpack can be run from the [webpack](ui.apps/src/main/webpack) folder. There's no need to run Maven every time a JavaScript or CSS change should be deployed to a local AEM instance. Instead, use Webpack's watch tasks in combination witih AEM Front.
