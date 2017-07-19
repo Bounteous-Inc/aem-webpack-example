@@ -54,8 +54,6 @@ module.exports = {
         use: [{
           loader: 'css-loader'
         }, {
-          loader: 'sass-loader'
-        }, {
           loader: 'postcss-loader',
           options: {
             plugins: (loader) => [
@@ -65,6 +63,8 @@ module.exports = {
               require('autoprefixer'),
             ],
           },
+        }, {
+          loader: 'sass-loader'
         }]
       })
     }]
