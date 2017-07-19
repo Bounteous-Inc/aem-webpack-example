@@ -29,8 +29,8 @@ The structure of this project mirrors Adobe's [Project Archetype](https://github
 Here's a step-by-step summary. Each step links to a folder containing a **README** file with more instructions. Make sure you read those for detailed instructions of each aspect.
 
 1. [Copy the example Webpack folder](ui.apps/src/main) to `ui.apps/src/main`.
-2. [Copy .babelrc and .eslintrc.js](ui.apps/src/main) to `ui.apps/src/main`.
-3. [Extend the project's pom.xml](ui.apps).
+2. [Copy .babelrc, .eslintrc.js and .stylelintrc](ui.apps/src/main) to `ui.apps/src/main`.
+3. [Extend your project's pom.xml](ui.apps).
 
 This is already enough to run the project's Maven build and Webpack. Try it now! Then you want to modify a few more things:
 
@@ -44,11 +44,11 @@ AEM Webpack Example supports the following tools out-of-the-box:
 
 - Maven integration using [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin).
 - Webpack.
-- SCSS.
+- CSS/SCSS.
 - Babel. JavaScript compilation using Babel's recommended [env preset](http://babeljs.io/docs/plugins/preset-env/).
 - ESLint. Linting for JavaScript.
 - Stylelint. Linting for CSS/SCSS.
-- Autoprefixer. Prefixes CSS to improve cross-browser compatiblity.
+- Autoprefixer. Prefixes CSS/SCSS to improve cross-browser compatibility.
 - Jest. Testing for JavaScript.
 
 ## Tips
