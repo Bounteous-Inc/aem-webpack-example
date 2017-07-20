@@ -1,0 +1,8 @@
+$background: skyblue;
+// $background: springgreen;  // <- changes background color of page
+// $background: #f1;  // <- throws Stylelint warning
+
+body {
+  background-color: $background;
+  display: flex;  // <- results in several display properties (using Autoprefixer)
+}
