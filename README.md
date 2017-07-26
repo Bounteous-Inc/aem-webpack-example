@@ -63,5 +63,5 @@ Video summary:
 
 ## Tips
 
-- Speed up development using [AEM Front](https://www.npmjs.com/package/aem-front). If used, Webpack can be run from the [webpack](ui.apps/src/main/webpack) folder. There's no need to run Maven every time a JavaScript or CSS change should be deployed to a local AEM instance. Instead, use Webpack's watch tasks in combination witih AEM Front.
+- Speed up development using [AEM Front](https://kevinw.de/aem-front). If used, Webpack can be run from the [webpack](ui.apps/src/main/webpack) folder. There's no need to run Maven every time a JavaScript, CSS or XML change should be deployed to a local AEM instance. Instead, use Webpack's watch tasks in combination with AEM Front.
 - If you or your company are looking for AEM or front-end experts, meet [Infield Digital](http://www.infielddigital.com/).
