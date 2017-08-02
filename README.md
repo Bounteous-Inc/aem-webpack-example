@@ -59,6 +59,8 @@ Video summary:
 * See what happens if CSS violates a Stylelint rule
 * See what Autoprefixer does to your CSS
 
+Note that the demo video shows a browser window that reloads automatically. However, that reload functionality is not part of AEM Webpack Example. Check out [AEM Front](https://kevinw.de/aem-front/) for ways to support auto-reloading of AEM pages.
+
 [![Webpack in use](http://infielddigital.com/shared/aem-webpack-example-demo-thumbnail.jpg)](http://infielddigital.com/shared/aem-webpack-example-demo.mov)
 
 ## Tips
