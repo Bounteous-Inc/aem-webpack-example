@@ -24,9 +24,9 @@ However, your front-end developers are probably not be happy with it and waste p
 
 ## Integrate Webpack into AEM
 
-The structure of this project mirrors Adobe's [Project Archetype](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype/tree/master/src/main/archetype). To get started, you can either [set up a new project](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype) using the archetype, or you use your existing project. Then...
+Before you start, you might want to read the blog post "[How does Webpack fit into AEM?](http://www.infielddigital.com/blog/webpack-in-aem/)" to get a general idea of some concepts that are implemented in AEM Webpack Example.
 
-Here's a step-by-step summary. Each step links to a folder containing a **README** file with more instructions. Make sure you read those for detailed instructions of each aspect.
+The structure of this project mirrors Adobe's [Project Archetype](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype/tree/master/src/main/archetype). To get started, you can either [set up a new project](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype) using the archetype, or you use your existing project. Then follow the step-by-step summary below. Each step links to a folder containing a **README** file with more instructions. Make sure you read those for detailed instructions of each aspect.
 
 1. [Copy the example Webpack folder](ui.apps/src/main) to `ui.apps/src/main`.
 2. [Copy .babelrc, .eslintrc.js and .stylelintrc](ui.apps/src/main) to `ui.apps/src/main`.
