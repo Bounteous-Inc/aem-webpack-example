@@ -1,2 +1,2 @@
-#base=../../
+#base=../
 webpack.bundles/components.bundle.js

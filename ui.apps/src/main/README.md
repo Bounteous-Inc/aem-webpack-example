@@ -11,7 +11,7 @@ const entryFiles = [{
 }];
 ```
 
-You can extend this array and reference additional JavaScript files with a configuration different from components.js. Every entry file will result in one output file. Currently, there's just one entry which results in `webpack.bundles/components.bundle.js`. If you add a second entry, you can generate a second file such as `webpack.bundles/different.bundle.js`.
+You can extend this array and reference additional JavaScript files with a configuration different from components.js. Every entry file will result in one output file. Currently, there's just one entry which results in `__appsFolderName__/webpack.bundles/components.bundle.js`. If you add a second entry, you can generate a second file such as `__appsFolderName__/webpack.bundles/different.bundle.js`.
 
 # .babelrc, .eslintrc.js, .stylelintrc
 
