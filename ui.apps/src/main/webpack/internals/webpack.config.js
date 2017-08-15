@@ -12,7 +12,7 @@ const extractCSS = new ExtractTextPlugin('[name].bundle.css');
 const NODE_MODULES = path.join(__dirname, '../node_modules');
 
 const libraryName = 'Project_Component_Library'; // Variable name (no white space)
-const outputPath = path.resolve(__dirname, '../../content/jcr_root/etc/designs/webpack.bundles');
+const outputPath = path.resolve(__dirname, '../../content/jcr_root/etc/designs/__appsFolderName__/webpack.bundles');
 
 const IS_PROD = (process.env.NODE_ENV === 'production');
 
