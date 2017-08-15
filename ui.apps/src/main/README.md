@@ -1,6 +1,6 @@
 # Webpack folder
 
-Copy the whole `webpack` folder into your project. It contains basic configurations for npm/Yarn, Webpack, Babel and Jest.
+Copy the whole `webpack` folder into your project. It contains basic configurations for npm, Webpack, Babel and Jest.
 
 Note that webpack.config.js defines the entry points for Webpack:
 
