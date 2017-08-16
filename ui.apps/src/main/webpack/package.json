@@ -11,8 +11,7 @@
     "postinstall": "npm rebuild node-sass",
     "test": "NODE_ENV=test jest",
     "test:debug": "BABEL_DISABLE_CACHE=1 npm run test -- --no-cache",
-    "test:watch": "npm run test -- --watch",
-    "start": "ttab -w exec npm run test:watch && npm run build:watch"
+    "test:watch": "npm run test -- --watch"
   },
   "author": "Infield Digital",
   "license": "GPL-3",
@@ -33,7 +32,6 @@
     "postcss-loader": "^2.0.6",
     "sass-loader": "^6.0.6",
     "stylelint": "^7.13.0",
-    "ttab": "^0.6.0",
     "webpack": "^3.2.0"
   },
   "dependencies": {
