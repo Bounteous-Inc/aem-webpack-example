@@ -12,7 +12,7 @@
     "test": "NODE_ENV=test jest",
     "test:debug": "BABEL_DISABLE_CACHE=1 npm run test -- --no-cache",
     "test:watch": "npm run test -- --watch",
-    "start": "npm-run-all --parallel build:watch test:watch"
+    "start": "FORCE_COLOR=1 CI=true npm-run-all --parallel build:watch test:watch"
   },
   "author": "Infield Digital",
   "license": "GPL-3",
