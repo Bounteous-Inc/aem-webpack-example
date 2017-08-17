@@ -12,7 +12,7 @@
     "test": "NODE_ENV=test jest",
     "test:debug": "BABEL_DISABLE_CACHE=1 npm run test -- --no-cache",
     "test:watch": "npm run test -- --watch",
-    "start": "ttab -w exec npm run test:watch && npm run build:watch"
+    "start": "FORCE_COLOR=1 CI=true npm-run-all --parallel build:watch test:watch"
   },
   "author": "Infield Digital",
   "license": "GPL-3",
@@ -30,10 +30,10 @@
     "jest": "^20.0.4",
     "jest-cli": "^20.0.4",
     "node-sass": "^4.5.3",
+    "npm-run-all": "^4.0.2",
     "postcss-loader": "^2.0.6",
     "sass-loader": "^6.0.6",
     "stylelint": "^7.13.0",
-    "ttab": "^0.6.0",
     "webpack": "^3.2.0"
   },
   "dependencies": {
