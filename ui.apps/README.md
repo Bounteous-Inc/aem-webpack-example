@@ -15,36 +15,37 @@ In order to run Webpack as part of your Maven build process, Eirik's [frontend-m
         <workingDirectory>src/main/webpack</workingDirectory>
     </configuration>
 
-    <execution>
-        <id>install node and npm</id>
-        <goals>
-            <goal>install-node-and-npm</goal>
-        </goals>
-        <configuration>
-            <nodeVersion>v7.2.1</nodeVersion>
-        </configuration>
-    </execution>
+    <executions>
+      <execution>
+          <id>install node and npm</id>
+          <goals>
+              <goal>install-node-and-npm</goal>
+          </goals>
+          <configuration>
+              <nodeVersion>v7.2.1</nodeVersion>
+          </configuration>
+      </execution>
 
-    <execution>
-        <id>npm install</id>
-        <goals>
-            <goal>npm</goal>
-        </goals>
-        <configuration>
-            <arguments>install</arguments>
-        </configuration>
-    </execution>
+      <execution>
+          <id>npm install</id>
+          <goals>
+              <goal>npm</goal>
+          </goals>
+          <configuration>
+              <arguments>install</arguments>
+          </configuration>
+      </execution>
 
-    <execution>
-        <id>npm deploy</id>
-        <goals>
-            <goal>npm</goal>
-        </goals>
+      <execution>
+          <id>npm deploy</id>
+          <goals>
+              <goal>npm</goal>
+          </goals>
 
-        <configuration>
-            <arguments>run deploy</arguments>
-        </configuration>
-    </execution>
-</executions>
+          <configuration>
+              <arguments>run deploy</arguments>
+          </configuration>
+      </execution>
+  </executions>
 </plugin>
 ```
