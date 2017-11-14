@@ -1,1 +1,1 @@
-*.bundle.*
+**/webpack.bundles/*.bundle.*
