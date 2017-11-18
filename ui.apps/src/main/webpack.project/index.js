@@ -13,13 +13,15 @@ const WEBPACK = {
    * <path>: Defines the path to an entry file. Entry files can use require.context()
    * to search a directory and include multiple files matching a pattern.
    */
-  entries: {
-    components: path.resolve(__dirname, './bundles/components.js')
-  }
-}
+  entry: {
+    components: path.resolve(__dirname, './bundles/components.js'),
+    // 'other-components': path.resolve(__dirname, './bundles/other-components.js'),
+  },
+};
 
 const ESLINT = {
-  // Optional: Replace `eslint:recommended` with `eslint-config-infield` and run `npm install --save-dev eslint-config-infield eslint` for stricter linting rules
+  // Optional: Replace `eslint:recommended` with `eslint-config-infield` and run
+  // `npm install --save-dev eslint-config-infield eslint` for stricter linting rules
   "extends": "eslint:recommended",
 
   "globals": {
@@ -29,7 +31,7 @@ const ESLINT = {
 
   "rules": {
     "no-console": "off"
-  }
+  },
 };
 
 module.exports = {

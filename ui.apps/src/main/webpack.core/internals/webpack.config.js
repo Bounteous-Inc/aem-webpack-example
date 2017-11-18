@@ -5,8 +5,12 @@
 
 const webpack = require('webpack');
 const path = require('path');
-const merge = require('merge')
-const CONFIG = require('./../../config');
+
+// Using `webpack-merge` we avoid issues with `ExtractTextPlugin` on
+// entries defined in a file outside of the Webpack folder.
+const mergeWebpack = require('webpack-merge');
+
+const CONFIG = require('./../../webpack.project');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const extractCSS = new ExtractTextPlugin('[name].bundle.css');
@@ -16,7 +20,7 @@ const IS_PROD = (process.env.NODE_ENV === 'production');
 
 const WEBPACK_DEFAULT = {
   // Entries are required
-  entry: CONFIG.webpack.entries,
+  entry: CONFIG.webpack.entry,
   module: {
     rules: [{
       test: /\.js$/,
@@ -68,7 +72,7 @@ const WEBPACK_DEFAULT = {
   },
   output: {
     filename: '[name].bundle.js',
-    library: CONFIG.aem.componentLibraryName,
+    library: CONFIG.aem.libraryName,
     path: CONFIG.aem.jcrRoot + '/apps/' + CONFIG.aem.projectFolderName + '/clientlibs/webpack.bundles',
   },
   plugins: [
@@ -92,4 +96,4 @@ const WEBPACK_DEFAULT = {
   },
 }
 
-module.exports = merge.recursive(true, WEBPACK_DEFAULT, CONFIG.webpack);
+module.exports = mergeWebpack(WEBPACK_DEFAULT, CONFIG.webpack);

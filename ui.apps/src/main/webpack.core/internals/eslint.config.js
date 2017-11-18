@@ -1,6 +1,6 @@
 const path = require('path');
 const merge = require('merge')
-const CONFIG = require('./../../config');
+const CONFIG = require('./../../webpack.project');
 const CONFIG_WEBPACK = require('./webpack.config.js');
 
 const ESLINT_DEFAULT = {
