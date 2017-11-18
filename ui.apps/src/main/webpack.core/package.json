@@ -1,6 +1,6 @@
 {
   "name": "webpack-core",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "private": true,
   "description": "Core front end setup of a project",
   "scripts": {
@@ -9,7 +9,7 @@
     "build:watch": "npm run build -- --watch",
     "deploy": "NODE_ENV=production npm run build -- -p",
     "postinstall": "npm rebuild node-sass",
-    "test": "NODE_ENV=test jest",
+    "test": "NODE_ENV=test jest --config internals/jest.config.js",
     "test:debug": "BABEL_DISABLE_CACHE=1 npm run test -- --no-cache",
     "test:watch": "npm run test -- --watch",
     "start": "FORCE_COLOR=1 CI=true npm-run-all --parallel build:watch test:watch"
@@ -29,23 +29,16 @@
     "extract-text-webpack-plugin": "^3.0.0",
     "jest": "^20.0.4",
     "jest-cli": "^20.0.4",
+    "merge": "^1.2.0",
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.0.2",
     "postcss-loader": "^2.0.6",
     "sass-loader": "^6.0.6",
     "stylelint": "^7.13.0",
-    "webpack": "^3.6.0"
+    "webpack": "^3.6.0",
+    "webpack-merge": "^4.1.1"
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0"
-  },
-  "jest": {
-    "roots": [
-      "../content/jcr_root/"
-    ],
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.js$",
-    "transform": {
-      "^.+\\.js$": "./internals/jest.preprocessor.js"
-    }
   }
 }

@@ -1,49 +1,36 @@
 /**
- * Basic webpack configuration including Babel loader for preset 'latest'.
- *
- * Configuration for Webpack 2, see https://webpack.js.org/configuration/
+ * Basic configuration for Webpack 2, see https://webpack.js.org/configuration/.
+ * Don't touch is file you want to stick with the standard.
  */
 
 const webpack = require('webpack');
 const path = require('path');
 
+// Using `webpack-merge` we avoid issues with `ExtractTextPlugin` on
+// entries defined in a file outside of the Webpack folder.
+const mergeWebpack = require('webpack-merge');
+
+const CONFIG = require('./../../webpack.project');
+
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const extractCSS = new ExtractTextPlugin('[name].bundle.css');
 const NODE_MODULES = path.join(__dirname, '../node_modules');
 
-const libraryName = 'Project_Component_Library'; // This string must represent a valid JavaScript variable name (e.g., don't start with a number, and don't use spaces)
-const outputPath = path.resolve(__dirname, '../../content/jcr_root/etc/designs/__appsFolderName__/webpack.bundles');
-
 const IS_PROD = (process.env.NODE_ENV === 'production');
 
-/*
- * Here we can add as many entry files as we want. One entry results in one output file.
- * <id>: Defines how the target file is named, e.g. 'main' results in 'main.bundle.js'.
- * <path>: Defines the path to an entry file. Entry files can use require.context()
- * to search a directory and include multiple files matching a pattern.
- */
-const entryFiles = [{
-  id: 'components',
-  path: path.resolve(__dirname, '../bundles/components.js')
-}];
-
-// Create separate entry points
-const entries = {};
-entryFiles.forEach(function (fileData) {
-  entries[fileData.id] = fileData.path;
-});
-
-module.exports = {
-  entry: entries,
+const WEBPACK_DEFAULT = {
+  // Entries are required
+  entry: CONFIG.webpack.entry,
   module: {
     rules: [{
       test: /\.js$/,
       exclude: /node_modules/,
       use: [{
-        loader: 'babel-loader'
+        loader: 'babel-loader',
       }, {
         loader: 'eslint-loader',
         options: {
+          configFile: path.resolve(__dirname, './eslint.config.js'),
           // This option makes ESLint automatically fix minor issues
           fix: !IS_PROD,
         },
@@ -73,24 +60,29 @@ module.exports = {
             },
           },
         }, {
-          loader: 'sass-loader'
+          loader: 'sass-loader',
+          options: {
+            includePaths: [
+              CONFIG.aem.jcrRoot + '/apps/' + CONFIG.aem.projectFolderName + '/components/webpack.resolve/'
+            ],
+          },
         }]
       })
     }]
   },
   output: {
     filename: '[name].bundle.js',
-    library: libraryName,
-    path: outputPath
+    library: CONFIG.aem.libraryName,
+    path: CONFIG.aem.jcrRoot + '/apps/' + CONFIG.aem.projectFolderName + '/clientlibs/webpack.bundles',
   },
   plugins: [
     extractCSS,
   ],
-  // If your node_modules folder is not in a parent folder of all source files, webpack cannot find the loader. That's shy we have to set an absolute path using the resolveLoader.root option.
   resolve: {
     extensions: ['.js', '.scss'],
     modules: [
-      NODE_MODULES
+      CONFIG.aem.jcrRoot + '/apps/' + CONFIG.aem.projectFolderName + '/components/webpack.resolve/',
+      NODE_MODULES,
     ]
   },
   watchOptions: {
@@ -99,7 +91,9 @@ module.exports = {
       '**/*.bundle.css',
       '**/*.bundle.js',
       '**/*.html',
-      '**/*.xml'
-    ]
-  }
+      '**/*.xml',
+    ],
+  },
 }
+
+module.exports = mergeWebpack(WEBPACK_DEFAULT, CONFIG.webpack);
