@@ -44,6 +44,7 @@ module.exports = {
       }, {
         loader: 'eslint-loader',
         options: {
+          configFile: path.resolve(__dirname, './eslint.config.js'),
           // This option makes ESLint automatically fix minor issues
           fix: !IS_PROD,
         },
