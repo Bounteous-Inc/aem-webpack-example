@@ -73,7 +73,12 @@ module.exports = {
             },
           },
         }, {
-          loader: 'sass-loader'
+          loader: 'sass-loader',
+          options: {
+            includePaths: [
+              path.resolve(__dirname, '../../content/jcr_root/apps/__appsFolderName__/components/webpack.resolve/'),
+            ],
+          },
         }]
       })
     }]
@@ -90,6 +95,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.scss'],
     modules: [
+      path.resolve(__dirname, '../../content/jcr_root/apps/__appsFolderName__/components/webpack.resolve/'),
       NODE_MODULES
     ]
   },
