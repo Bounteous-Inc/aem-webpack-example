@@ -1,9 +1,15 @@
-module.exports = {
+const path = require('path');
+const merge = require('merge')
+const CONFIG = require('./../../config');
+
+const JEST_DEFAULT = {
   "roots": [
-    "../../content/jcr_root/"
+    CONFIG.aem.jcrRoot,
   ],
   "testRegex": "(/__tests__/.*|\\.(test|spec))\\.js$",
   "transform": {
     "^.+\\.js$": "./jest.preprocessor.js"
-  }
+  },
 };
+
+module.exports = merge.recursive(true, JEST_DEFAULT, CONFIG.jest);

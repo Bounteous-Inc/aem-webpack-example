@@ -9,6 +9,4 @@ export function isEmpty(object) {
   return Object.keys(object).length === 0;
 }
 
-export const helloWorld = function () {
-  return 'Hello world!';
-};
+export const helloWorld = () => 'Hello world!';
