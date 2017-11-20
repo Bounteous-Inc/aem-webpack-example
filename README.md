@@ -37,6 +37,18 @@ This is already enough to run the project's Maven build and Webpack. Try it now!
 1. [Use the generated files on your page](ui.apps/src/main/content/jcr_root/apps/__appsFolderName__/clientlibs/clientlib-components), for example by including them in a clientlib.
 2. Customize the configuration in the [webpack.project](ui.apps/src/main) folder.
 
+## Demo
+
+Video summary:
+
+- Automatically watch to JavaScript and SCSS changes using script `npm run build:watch`
+- See what happens if CSS violates a Stylelint rule
+- See what Autoprefixer does to your CSS
+
+> Note that the demo video shows a browser window that reloads automatically. However, that reload functionality is not part of AEM Webpack Example. Check out [AEM Front](https://kevinw.de/aem-front/) for ways to support auto-reloading of AEM pages. AEM Front speeds up development because it avoids having to run Maven every time a JavaScript, CSS or XML was updated and should get deployed to a local AEM instance. This gets extremely helpful when combined with Webpack's watch tasks.
+
+[![Webpack in use](https://infielddigital.com/shared/aem-webpack-example-demo-thumbnail.jpg)](https://infielddigital.com/shared/aem-webpack-example-demo.mov)
+
 ## Concepts
 
 - Unlimited `webpack.module` folders. This is where developers define component-specific JavaScript and SCSS.
@@ -57,18 +69,6 @@ AEM Webpack Example supports the following tools out-of-the-box:
 - Stylelint. Linting for CSS/SCSS.
 - Autoprefixer. Prefixes CSS/SCSS to improve cross-browser compatibility.
 - Jest. Testing for JavaScript.
-
-## Demo
-
-Video summary:
-
-- Automatically watch to JavaScript and SCSS changes using script `npm run build:watch`
-- See what happens if CSS violates a Stylelint rule
-- See what Autoprefixer does to your CSS
-
-> Note that the demo video shows a browser window that reloads automatically. However, that reload functionality is not part of AEM Webpack Example. Check out [AEM Front](https://kevinw.de/aem-front/) for ways to support auto-reloading of AEM pages. AEM Front speeds up development because it avoids having to run Maven every time a JavaScript, CSS or XML was updated and should get deployed to a local AEM instance. This gets extremely helpful when combined with Webpack's watch tasks.
-
-[![Webpack in use](https://infielddigital.com/shared/aem-webpack-example-demo-thumbnail.jpg)](https://infielddigital.com/shared/aem-webpack-example-demo.mov)
 
 ## Who we are
 
