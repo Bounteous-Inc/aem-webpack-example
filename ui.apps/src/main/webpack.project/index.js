@@ -22,8 +22,8 @@ const WEBPACK = {
    * More details: https://webpack.js.org/concepts/entry-points/
    */
   entry: {
-    components: path.resolve(__dirname, './bundles/components.js'),
-    // 'other-components': path.resolve(__dirname, './bundles/other-components.js'),
+    components: path.resolve(__dirname, './entries/components.js'),
+    // 'other-components': path.resolve(__dirname, './entries/other-components.js'),
   },
 };
 
