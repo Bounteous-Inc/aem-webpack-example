@@ -1,25 +1,10 @@
 # Webpack folder
 
-Copy the whole `webpack` folder into your project. It contains basic configurations for npm, Webpack, Babel and Jest.
+Copy the two Webpack folders as well as `.babelrc` (for Babel) and `.stylelintrc` (for Stylelint) into your project:
 
-Note that webpack.config.js defines the entry points for Webpack:
-
-```
-const entryFiles = [{
-  id: 'components',
-  path: path.resolve(__dirname, '../bundles/components.js')
-}];
-```
-
-You can extend this array and reference additional JavaScript files with a configuration different from components.js. Every entry file will result in one output file. Currently, there's just one entry which results in `__appsFolderName__/webpack.bundles/components.bundle.js`. If you add a second entry, you can generate a second file such as `__appsFolderName__/webpack.bundles/different.bundle.js`.
-
-# .babelrc, .eslintrc.js, .stylelintrc
-
-By placing `.babelrc` (for Babel), `.eslintrc.js` (for ESLint) and `.stylelintrc` (for Stylelint) in a parent/ancestor folder of the content folder, we avoid errors potentially occurring while files in the content folder are processed.
-
-The linting rules defined in .eslintrc.js are pretty loose on purpose for this example. It allows you to integrate the Webpack setup more easily into your existing project. However, we recommend to make the rules more strict – as strict as possible.
-
-If you want to define global variables (variables that are available across various processed JavaScript files), define them in .eslintrc.js ([documentation](http://eslint.org/docs/user-guide/configuring#specifying-globals)). One popular global variable is `$` (for jQuery).
+- `webpack.core` contains basic configurations for npm, Webpack, Babel and Jest. Our goal for further development of this project is to allow you to update this folder without having to manually configure it again. For that reason, since version 2.0.0, we have a second folder...
+- `webpack.project` is meant to contain your project-specific configuration. It allows you to override and extend certain parts of `webpack.core`. Check out [the folder's index.js](./webpack.project/index.js) for more details.
+- `.babelrc` (for Babel), `.eslintrc.js` (for ESLint) and `.stylelintrc` (for Stylelint) in a parent/ancestor folder of the content folder, we avoid errors potentially occurring while files in the content folder are processed.
 
 # .gitignore
 
