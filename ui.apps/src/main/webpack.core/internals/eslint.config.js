@@ -1,4 +1,3 @@
-const path = require('path');
 const merge = require('merge')
 const CONFIG = require('./../../webpack.project');
 const CONFIG_WEBPACK = require('./webpack.config.js');
@@ -7,11 +6,11 @@ const ESLINT_DEFAULT = {
   env: {
     browser: true,
     es6: true,
-    node: true
+    node: true,
   },
   parserOptions: {
     ecmaVersion: 8,
-    sourceType: 'module'
+    sourceType: 'module',
   },
   settings: {
     // This prevents `no-unused-vars` and `import/no-unresolved` from being thrown
@@ -25,6 +24,6 @@ const ESLINT_DEFAULT = {
       },
     },
   },
-}
+};
 
 module.exports = merge.recursive(true, ESLINT_DEFAULT, CONFIG.eslint);

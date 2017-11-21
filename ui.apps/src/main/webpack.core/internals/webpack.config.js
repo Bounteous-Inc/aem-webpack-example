@@ -52,6 +52,7 @@ const WEBPACK_DEFAULT = {
 
               if (!IS_PROD) {
                 plugins.push(require('stylelint')({
+                  configFile: path.resolve(__dirname, './stylelint.config.js'),
                   fix: true,
                 }))
               }

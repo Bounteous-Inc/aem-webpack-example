@@ -37,17 +37,45 @@ const WEBPACK = {
 const ESLINT = {
   // Optional: Replace `eslint:recommended` with `eslint-config-infield` and run
   // `npm install --save-dev eslint-config-infield eslint` for stricter linting rules
-  "extends": "eslint:recommended",
+  extends: "eslint:recommended",
 
   // If you want to define variables that are available across various processed JavaScript
   // files, define them here. More details: http://eslint.org/docs/user-guide/configuring#specifying-globals
-  "globals": {
-    "$": true,
-    "Granite": true,
+  globals: {
+    $: true,
+    Granite: true,
   },
 
-  "rules": {
+  rules: {
     "no-console": "off",
+  },
+};
+
+/**
+ * STYLELINT
+ */
+const STYLELINT = {
+  // Optional: Base you configuration on a different one such as `stylelint-config-infield`
+  // and run `npm install --save-dev stylelint-config-infield`
+
+  // extends: "stylelint-config-standard",
+
+  rules: {
+    "block-no-empty": null,
+    "color-no-invalid-hex": true,
+    "comment-empty-line-before": ["always", {
+      "ignore": ["stylelint-command", "after-comment"]
+    }],
+    "declaration-colon-space-after": "always",
+    indentation: ["tab", {
+      except: ["value"]
+    }],
+    "max-empty-lines": 2,
+    "rule-empty-line-before": ["always", {
+      except: ["first-nested"],
+      ignore: ["after-comment"]
+    }],
+    "unit-whitelist": ["em", "rem", "%", "s"],
   },
 };
 
@@ -62,5 +90,6 @@ module.exports = {
   aem: AEM,
   eslint: ESLINT,
   jest: JEST,
+  stylelint: STYLELINT,
   webpack: WEBPACK,
 };
