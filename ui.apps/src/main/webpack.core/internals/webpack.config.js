@@ -9,16 +9,23 @@ const path = require('path');
 // Using `webpack-merge` we avoid issues with `ExtractTextPlugin` on
 // entries defined in a file outside of the Webpack folder.
 const mergeWebpack = require('webpack-merge');
-
 const CONFIG = require('./../../webpack.project');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const extractCSS = new ExtractTextPlugin('[name].bundle.css');
-const NODE_MODULES = path.join(__dirname, '../node_modules');
+const extractCSS = new ExtractTextPlugin({
+  // `allChunks` must be true because we're using `.extract()` and otherwise
+  // `extract-text-webpack-plugin` would run twice.
+  allChunks: true,
+  filename: '[name].bundle.css',
+});
 
+const NODE_MODULES = path.join(__dirname, '../node_modules');
 const IS_PROD = (process.env.NODE_ENV === 'production');
 
 const WEBPACK_DEFAULT = {
+  stats: {
+    children: false
+  },
   // Entries are required
   entry: CONFIG.webpack.entry,
   module: {
@@ -54,7 +61,9 @@ const WEBPACK_DEFAULT = {
                 plugins.push(require('stylelint')({
                   configFile: path.resolve(__dirname, './stylelint.config.js'),
                   fix: true,
-                }))
+                }));
+
+                plugins.push(require('postcss-reporter'));
               }
 
               return plugins;
