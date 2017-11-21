@@ -53,9 +53,7 @@ const WEBPACK_DEFAULT = {
           loader: 'postcss-loader',
           options: {
             plugins: (loader) => {
-              const plugins = [
-                require('autoprefixer')
-              ];
+              const plugins = [];
 
               if (!IS_PROD) {
                 plugins.push(require('stylelint')({
@@ -65,6 +63,9 @@ const WEBPACK_DEFAULT = {
 
                 plugins.push(require('postcss-reporter'));
               }
+
+              // Load Autoprefixer AFTER Stylelint to avoid failing on Stylelint's prefix rules
+              plugins.push(require('autoprefixer'));
 
               return plugins;
             },

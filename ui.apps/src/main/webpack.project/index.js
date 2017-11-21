@@ -57,9 +57,8 @@ const ESLINT = {
 const STYLELINT = {
   // Optional: Base you configuration on a different one such as `stylelint-config-infield`
   // and run `npm install --save-dev stylelint-config-infield`
-
-  // extends: "stylelint-config-standard",
-
+  
+  // extends: "stylelint-config-infield",
   rules: {
     "block-no-empty": null,
     "color-no-invalid-hex": true,
