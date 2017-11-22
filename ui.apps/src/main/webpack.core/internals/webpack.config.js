@@ -83,7 +83,9 @@ const WEBPACK_DEFAULT = {
   },
   output: {
     filename: '[name].bundle.js',
-    library: CONFIG.aem.libraryName,
+    // We reduce the probability of getting an "Unexpected token" error from UglifyJS
+    // Background: The library name must represent a valid JavaScript variable name (e.g., don't start with a number, and don't use spaces)
+    library: CONFIG.aem.libraryName.replace(/[\s-]/, '_'),
     path: CONFIG.aem.jcrRoot + '/apps/' + CONFIG.aem.projectFolderName + '/clientlibs/webpack.bundles',
   },
   plugins: [

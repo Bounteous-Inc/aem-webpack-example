@@ -7,7 +7,7 @@ const path = require('path');
  */
 const AEM = {
   projectFolderName: '__appsFolderName__',
-  libraryName: 'Project_Component_Library', // This string must represent a valid JavaScript variable name (e.g., don't start with a number, and don't use spaces)
+  libraryName: 'Project_Component_Library',
   jcrRoot: path.resolve(__dirname, '../content/jcr_root/'),
 };
 
@@ -57,7 +57,7 @@ const ESLINT = {
 const STYLELINT = {
   // Optional: Base you configuration on a different one such as `stylelint-config-infield`
   // and run `npm install --save-dev stylelint-config-infield`
-  
+
   // extends: "stylelint-config-infield",
   rules: {
     "block-no-empty": null,
