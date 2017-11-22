@@ -1,4 +1,4 @@
-const merge = require('merge')
+const merge = require('merge');
 const CONFIG = require('./../../webpack.project');
 
 const JEST_DEFAULT = {

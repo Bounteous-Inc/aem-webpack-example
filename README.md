@@ -41,7 +41,7 @@ This is already enough to run the project's Maven build and Webpack. Try it now!
 
 Video summary:
 
-- Automatically watch to JavaScript and SCSS changes using script `npm run build:watch`
+- Automatically watch JavaScript and SCSS changes using script `npm run build:watch`
 - See what happens if CSS violates a Stylelint rule
 - See what Autoprefixer does to your CSS
 
