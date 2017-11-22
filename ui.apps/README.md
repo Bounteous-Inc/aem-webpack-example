@@ -12,7 +12,7 @@ In order to run Webpack as part of your Maven build process, Eirik's [frontend-m
     <version>1.6</version>
 
     <configuration>
-        <workingDirectory>src/main/webpack</workingDirectory>
+        <workingDirectory>src/main/webpack.core</workingDirectory>
     </configuration>
 
     <executions>
