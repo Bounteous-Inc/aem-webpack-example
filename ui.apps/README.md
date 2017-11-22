@@ -9,7 +9,7 @@ In order to run Webpack as part of your Maven build process, Eirik's [frontend-m
 <plugin>
     <groupId>com.github.eirslett</groupId>
     <artifactId>frontend-maven-plugin</artifactId>
-    <version>1.5</version>
+    <version>1.6</version>
 
     <configuration>
         <workingDirectory>src/main/webpack</workingDirectory>
