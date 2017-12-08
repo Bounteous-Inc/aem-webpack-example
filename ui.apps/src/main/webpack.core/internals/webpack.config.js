@@ -55,7 +55,10 @@ const WEBPACK_DEFAULT = {
             plugins: (loader) => {
               const plugins = [];
 
-              if (!IS_PROD) {
+              if (IS_PROD) {
+                // "css-mqpacker" packs same CSS media query rules into one
+                plugins.push(require('css-mqpacker'));
+              } else {
                 plugins.push(require('stylelint')({
                   configFile: path.resolve(__dirname, './stylelint.config.js'),
                   fix: true,

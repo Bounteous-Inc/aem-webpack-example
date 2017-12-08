@@ -1,6 +1,6 @@
 {
   "name": "webpack-core",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "private": true,
   "description": "Core front end setup of a project",
   "scripts": {
@@ -24,6 +24,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-jest": "^21.2.0",
     "css-loader": "^0.28.7",
+    "css-mqpacker": "^6.0.1",
     "eslint": "^4.11.0",
     "eslint-loader": "^1.9.0",
     "extract-text-webpack-plugin": "^3.0.2",
