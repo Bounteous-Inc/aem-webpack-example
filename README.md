@@ -46,7 +46,7 @@ Video summary:
 
 > Note that the demo video shows a browser window that reloads automatically. However, that reload functionality is not part of AEM Webpack Example. Check out [AEM Front](https://kevinw.de/aem-front/) for ways to support auto-reloading of AEM pages. AEM Front speeds up development because it avoids having to run Maven every time a JavaScript, CSS or XML was updated and should get deployed to a local AEM instance. This gets extremely helpful when combined with Webpack's watch tasks.
 
-[![Webpack in use](https://infielddigital.com/shared/aem-webpack-example-demo-thumbnail.jpg)](https://infielddigital.com/shared/aem-webpack-example-demo.mov)
+[![Webpack in use](https://www.infielddigital.com/shared/aem-webpack-example-demo-thumbnail.jpg)](https://www.infielddigital.com/shared/aem-webpack-example-demo.mov)
 
 ## Concepts
 
