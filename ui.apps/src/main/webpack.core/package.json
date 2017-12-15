@@ -1,14 +1,14 @@
 {
   "name": "webpack-core",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "private": true,
   "description": "Core front end setup of a project",
   "scripts": {
     "build": "webpack --config internals/webpack.config.js",
     "build:debug": "BABEL_DISABLE_CACHE=1 npm run build",
     "build:watch": "npm run build -- --watch",
-    "deploy": "NODE_ENV=production npm run build -- -p",
-    "postinstall": "npm rebuild node-sass",
+    "deploy": "NODE_ENV=production \"${npm_node_execpath}\" \"${npm_execpath}\" run build -- -p",
+    "postinstall": "\"${npm_node_execpath}\" \"${npm_execpath}\" rebuild node-sass",
     "test": "NODE_ENV=test jest --config internals/jest.config.js",
     "test:debug": "BABEL_DISABLE_CACHE=1 npm run test -- --no-cache",
     "test:watch": "npm run test -- --watch",
