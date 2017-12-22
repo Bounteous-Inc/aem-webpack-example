@@ -36,7 +36,7 @@ const WEBPACK = {
  */
 const ESLINT = {
   // Optional: Replace `eslint:recommended` with `eslint-config-infield` and run
-  // `npm install --save-dev eslint-config-infield eslint` for stricter linting rules
+  // `npm install --save-dev eslint-config-infield` for stricter linting rules
   extends: "eslint:recommended",
 
   // If you want to define variables that are available across various processed JavaScript
