@@ -79,6 +79,17 @@ const STYLELINT = {
 };
 
 /**
+ * BABEL
+ *
+ * You can override or extend the default BABEL configuration using options from
+ * https://babeljs.io/docs/usage/api/#options
+ */
+const BABEL = {
+  // You can set a path to your project-specific .babelrc file as follows:
+  // extends: path.resolve(__dirname, '../.babelrc'),
+};
+
+/**
  * JEST
  *
  * You can override or extend JEST, but you don't have to.
@@ -87,6 +98,7 @@ const JEST = {};
 
 module.exports = {
   aem: AEM,
+  babel: BABEL,
   eslint: ESLINT,
   jest: JEST,
   stylelint: STYLELINT,
