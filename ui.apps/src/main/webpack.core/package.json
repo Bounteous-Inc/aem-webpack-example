@@ -1,6 +1,6 @@
 {
   "name": "webpack-core",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "private": true,
   "description": "Core front end setup of a project",
   "scripts": {

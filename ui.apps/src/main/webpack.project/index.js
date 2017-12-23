@@ -36,7 +36,7 @@ const WEBPACK = {
  */
 const ESLINT = {
   // Optional: Replace `eslint:recommended` with `eslint-config-infield` and run
-  // `npm install --save-dev eslint-config-infield eslint` for stricter linting rules
+  // `npm install --save-dev eslint-config-infield` for stricter linting rules
   extends: "eslint:recommended",
 
   // If you want to define variables that are available across various processed JavaScript
@@ -79,6 +79,17 @@ const STYLELINT = {
 };
 
 /**
+ * BABEL
+ *
+ * You can override or extend the default BABEL configuration using options from
+ * https://babeljs.io/docs/usage/api/#options
+ */
+const BABEL = {
+  // You can set a path to your project-specific .babelrc file as follows:
+  // extends: path.resolve(__dirname, '../.babelrc'),
+};
+
+/**
  * JEST
  *
  * You can override or extend JEST, but you don't have to.
@@ -87,6 +98,7 @@ const JEST = {};
 
 module.exports = {
   aem: AEM,
+  babel: BABEL,
   eslint: ESLINT,
   jest: JEST,
   stylelint: STYLELINT,

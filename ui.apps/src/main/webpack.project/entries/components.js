@@ -9,6 +9,7 @@
 const cache = {};
 
 function importAll(r) {
+  // r.keys().forEach((key) => {  // ES6
   r.keys().forEach(function (key) {
     cache[key] = r(key);
     return cache;

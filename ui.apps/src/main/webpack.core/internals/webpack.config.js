@@ -34,9 +34,7 @@ const WEBPACK_DEFAULT = {
       exclude: /node_modules/,
       use: [{
         loader: 'babel-loader',
-        options: {
-          extends : path.resolve(__dirname, '../.babelrc'),
-        },
+        options: require('./babel.config.js'),
       }, {
         loader: 'eslint-loader',
         options: {
