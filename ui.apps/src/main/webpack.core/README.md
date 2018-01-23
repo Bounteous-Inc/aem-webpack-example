@@ -1,10 +1,10 @@
 # package.json
 
-If the Maven build is run, it will automatically run "npm run deploy" and do its front end magic.
+If the Maven build is run, it will automatically run "npm run production" and do its front end magic.
 
-If you want to run single scripts without having to run the full Maven build, here are the commands:
+If you want to run single scripts without having to run the full Maven build, here are the most often used commands:
 
-* `npm start` to run tests and bundle JavaScript and CSS files whenever a file is saved. IMPORTANT: Note that simply bundling those files doesn't deploy them into the AEM instance. For that you have to run a tool such as [AEM Front](https://kevinw.de/aem-front/), or run the Maven build.
-* `npm run build:watch` if you don't want to run tests but still watch file changes. Run AEM Front in parallel (see previous point).
-* `npm run deploy` to make the code production-ready usable by the Maven build.
-* `npm test` if you want to only run tests once.
+* `npm start` to run AEM Front and Webpack and keep it running in watch mode. Whenever a JavaScript or CSS file is saved, this script automatically compiles the code and pushes it into AEM. IMPORTANT: Note that AEM Front may push changes into AEM differently than the Maven build, possibly causing issues that are hard to debug.
+* `npm run build:watch` if you only want to run Webpack's watcher without AEM Front.
+* `npm run production` to make the code production-ready. This is the script the Maven build should run.
+* `npm test` if you want to run tests.

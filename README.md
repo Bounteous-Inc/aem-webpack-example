@@ -40,11 +40,9 @@ This is already enough to run the project's Maven build and Webpack. Try it now!
 
 Video summary:
 
-- Automatically watch JavaScript and SCSS changes using script `npm run build:watch`
+- Automatically watch JavaScript and SCSS changes
 - See what happens if CSS violates a Stylelint rule
 - See what Autoprefixer does to your CSS
-
-> Note that the demo video shows a browser window that reloads automatically. However, that reload functionality is not part of AEM Webpack Example. Check out [AEM Front](https://kevinw.de/aem-front/) for ways to support auto-reloading of AEM pages. AEM Front speeds up development because it avoids having to run Maven every time a JavaScript, CSS or XML was updated and should get deployed to a local AEM instance. This gets extremely helpful when combined with Webpack's watch tasks.
 
 [![Webpack in use](https://www.infielddigital.com/shared/aem-webpack-example-demo-thumbnail.jpg)](https://www.infielddigital.com/shared/aem-webpack-example-demo.mov)
 
@@ -62,6 +60,7 @@ AEM Webpack Example supports the following tools out-of-the-box:
 
 - Maven integration using [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin).
 - Webpack.
+- [AEM Front](https://kevinw.de/aem-front/) to auto-push changes into AEM and reload the browser window.
 - CSS/SCSS.
 - Babel. JavaScript compilation using Babel's recommended [env preset](http://babeljs.io/docs/plugins/preset-env/).
 - ESLint. Linting for JavaScript.

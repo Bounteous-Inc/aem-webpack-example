@@ -37,13 +37,13 @@ In order to run Webpack as part of your Maven build process, Eirik's [frontend-m
       </execution>
 
       <execution>
-          <id>npm deploy</id>
+          <id>npm production</id>
           <goals>
               <goal>npm</goal>
           </goals>
 
           <configuration>
-              <arguments>run deploy</arguments>
+              <arguments>run production</arguments>
           </configuration>
       </execution>
   </executions>
