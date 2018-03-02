@@ -6,11 +6,11 @@ This project demonstrates a proven practice for setting up Webpack in AEM. It pr
 
 AEM might be the best system for content and user experience management. It provides reliable tools that power [some](http://store.nike.com/) [of](https://aws.amazon.com/) [the](https://www.chase.com/) [biggest](https://www.salesforce.com/) websites and that Java developers enjoy working with.
 
-However, your front-end developers are probably not be happy with it and waste precious time. Why? AEM's out-of-the-box tools can't keep up with the rapid advances in the front-end world.
+However, your front end developers are probably not happy with it and waste precious time. Why? AEM's out-of-the-box tools can't keep up with the rapid advances in the front end world.
 
-![Front-end development in AEM](https://i.imgur.com/vKwoLvU.jpg)
+![Front end development in AEM](https://i.imgur.com/vKwoLvU.jpg)
 
-**Webpack in AEM improves front-end development because...**
+**Webpack in AEM improves front end development because...**
 
 - It allows using the latest JavaScript standards _without_ breaking clientlibs and AEM's built-in YUI compressor.
 - It promotes modular and reusable code. You can import modules, variables and files using JavaScript and tie it to an AEM component. This results in code that's easier to maintain, which saves time and _$$$_.
@@ -76,4 +76,4 @@ With offices in San Francisco and Denver, we provide Customer Experience Managem
 
 [We're hiring!](https://www.infielddigital.com/careers/)
 
-And we are the AEM and front-end experts you've been looking for: [meet us](https://www.infielddigital.com/).
+And we are the AEM and front end experts you've been looking for: [meet us](https://www.infielddigital.com/).
