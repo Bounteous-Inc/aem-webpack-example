@@ -11,11 +11,10 @@ const path = require('path');
 const mergeWebpack = require('webpack-merge');
 const CONFIG = require('./../../webpack.project');
 
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const extractCSS = new ExtractTextPlugin({
-  // `allChunks` must be true because we're using `.extract()` and otherwise
-  // `extract-text-webpack-plugin` would run twice.
-  allChunks: true,
+// Webpack v4: `MiniCssExtractPlugin` replaces `ExtractTextPlugin`
+// https://github.com/webpack-contrib/mini-css-extract-plugin
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const extractCSS = new MiniCssExtractPlugin({
   filename: '[name].bundle.css',
 });
 
@@ -23,6 +22,8 @@ const NODE_MODULES = path.join(__dirname, '../node_modules');
 const IS_PROD = (process.env.NODE_ENV === 'production');
 
 const WEBPACK_DEFAULT = {
+  // Webpack v4: `mode` is required
+  mode: IS_PROD ? 'production' : 'development',
   stats: {
     children: false
   },
@@ -34,10 +35,11 @@ const WEBPACK_DEFAULT = {
       exclude: /node_modules/,
       use: [{
         loader: 'babel-loader',
-        options: require('./babel.config.js'),
+        // Webpack v4: `query` replaces `options`
+        query: require('./babel.config.js'),
       }, {
         loader: 'eslint-loader',
-        options: {
+        query: {
           configFile: path.resolve(__dirname, './eslint.config.js'),
           // This option makes ESLint automatically fix minor issues
           fix: !IS_PROD,
@@ -47,12 +49,13 @@ const WEBPACK_DEFAULT = {
       // The "?" allows you use both file formats: .css and .scss
       test: /\.s?css$/,
       exclude: /node_modules/,
-      use: ExtractTextPlugin.extract({
-        use: [{
+      use: [
+        MiniCssExtractPlugin.loader,
+        {
           loader: 'css-loader'
         }, {
           loader: 'postcss-loader',
-          options: {
+          query: {
             plugins: (loader) => {
               const plugins = [];
 
@@ -73,13 +76,13 @@ const WEBPACK_DEFAULT = {
           },
         }, {
           loader: 'sass-loader',
-          options: {
+          query: {
             includePaths: [
               CONFIG.aem.jcrRoot + '/apps/' + CONFIG.aem.projectFolderName + '/components/webpack.resolve/'
             ],
           },
-        }]
-      })
+        }
+      ]
     }]
   },
   output: {
@@ -91,6 +94,12 @@ const WEBPACK_DEFAULT = {
   },
   plugins: [
     extractCSS,
+    // INFO: We only need `LoaderOptionsPlugin` because ESLint doesn't support the `query` option yet.
+    // See: https://github.com/webpack/webpack/issues/6556
+    // TODO: Once ESLint support `query` by default, remove this plugin.
+    new webpack.LoaderOptionsPlugin({
+      options: {}
+    }),
   ],
   resolve: {
     extensions: ['.js', '.scss'],
@@ -108,6 +117,6 @@ const WEBPACK_DEFAULT = {
       '**/*.xml',
     ],
   },
-}
+};
 
 module.exports = mergeWebpack(WEBPACK_DEFAULT, CONFIG.webpack);
