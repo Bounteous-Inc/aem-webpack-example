@@ -22,6 +22,7 @@ const NODE_MODULES = path.join(__dirname, '../node_modules');
 const IS_PROD = (process.env.NODE_ENV === 'production');
 
 const WEBPACK_DEFAULT = {
+  cache: IS_PROD,
   // Webpack v4: `mode` is required
   mode: IS_PROD ? 'production' : 'development',
   stats: {
