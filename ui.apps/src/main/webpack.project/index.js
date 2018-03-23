@@ -74,7 +74,7 @@ const STYLELINT = {
       except: ["first-nested"],
       ignore: ["after-comment"]
     }],
-    "unit-whitelist": ["em", "rem", "%", "s"],
+    "unit-whitelist": ["px", "em", "rem", "%", "s"],
   },
 };
 
