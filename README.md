@@ -12,9 +12,9 @@ However, your front end developers are probably not happy with it and waste prec
 
 **Webpack in AEM improves front end development because...**
 
-- It allows using the latest JavaScript standards _without_ breaking clientlibs and AEM's built-in YUI compressor.
+- It allows using the latest JavaScript standards _without_ breaking clientlibs and AEM's built-in compression libraries.
 - It promotes modular and reusable code. You can import modules, variables and files using JavaScript and tie it to an AEM component. This results in code that's easier to maintain, which saves time and _$$$_.
-- It can be extended easily and supports the integration of [~500.000](http://www.modulecounts.com/) npm modules.
+- It can be extended easily and supports the integration of [~600.000](http://www.modulecounts.com/) npm modules.
 - It can automatically prefix CSS for better cross-browser compatibility, ensure consistent code style, and automate most tasks you can think of.
 - It even allows writing tests for JavaScript.
 
@@ -33,7 +33,7 @@ The structure of this project mirrors Adobe's [Project Archetype](https://github
 
 This is already enough to run the project's Maven build and Webpack. Try it now! Then you want to modify a few more things:
 
-3. Customize the configuration in the [webpack.project](ui.apps/src/main) folder.
+3. Customize the [webpack.project configuration](ui.apps/src/main/webpack.project/index.js).
 4. [Use the generated files on your page](ui.apps/src/main/content/jcr_root/apps/__appsFolderName__/clientlibs/clientlib-components), for example by including them in a clientlib.
 
 ## Demo
@@ -49,7 +49,7 @@ Video summary:
 ## Concepts
 
 - Unlimited `webpack.module` folders. This is where developers define component-specific JavaScript and SCSS.
-- One `webpack.core` folder. This is where the magic happens and core tools of this framework are defined. Avoid touching this folder to make future upgrades easier. We're aware that the configuration isn't ideal and doesn't satisfy everyone's needs, so we encourage you to raise questions and open issue tickets for further discussion.
+- One `webpack.core` folder. This is where core tools of this framework are defined. Avoid touching this folder to make future upgrades easier. All you might want to change in this folder is the `package.json` file in order to update NPM dependencies and scripts. We're aware that the configuration isn't ideal and doesn't satisfy everyone's needs, so we encourage you to raise questions and open [issue tickets](./issues) for further discussion.
 - One `webpack.project` folder. Here lives the configuration for a project, allowing you to override and extend defaults defined in `webpack.core`.
 - One `webpack.resolve` folder. Webpack takes this folder and resolves its content for easy imports into JS and SCSS files. See [webpack.resolve](ui.apps/src/main/content/jcr_root/apps/__appsFolderName__/components/webpack.resolve).
 - One `webpack.bundle` folder. Every entry file defined in `webpack.project` results in one output file that gets stored in this folder.
@@ -76,4 +76,4 @@ With offices in San Francisco and Denver, we provide Customer Experience Managem
 
 [We're hiring!](https://www.infielddigital.com/careers/)
 
-And we are the AEM and front end experts you've been looking for: [meet us](https://www.infielddigital.com/).
+And we are the AEM and front end experts you've been looking for. [Meet us](https://www.infielddigital.com/).
