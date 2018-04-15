@@ -1,6 +1,7 @@
 /**
- * Basic configuration for Webpack 2, see https://webpack.js.org/configuration/.
- * Don't touch is file you want to stick with the standard.
+ * Basic configuration for Webpack, see https://webpack.js.org/configuration/.
+ * Don't touch is file if you want to stick with the standard.
+ * Use the configuration file in the webpack.project folder.
  */
 
 const webpack = require('webpack');
