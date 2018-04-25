@@ -63,7 +63,7 @@ const STYLELINT = {
     "block-no-empty": null,
     "color-no-invalid-hex": true,
     "comment-empty-line-before": ["always", {
-      "ignore": ["stylelint-command", "after-comment"]
+      "ignore": ["after-comment"]
     }],
     "declaration-colon-space-after": "always",
     indentation: ["tab", {
