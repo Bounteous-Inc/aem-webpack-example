@@ -70,14 +70,7 @@ const WEBPACK_DEFAULT = {
               }
 
               // Load Autoprefixer AFTER Stylelint to avoid failing on Stylelint's prefix rules
-              plugins.push(require('autoprefixer')({
-                // Options: https://github.com/postcss/autoprefixer#options
-                browsers: [
-                  '> 1%',
-                  'last 3 versions',
-                  'ie 10',
-                ],
-              }));
+              plugins.push(require('autoprefixer'));
 
               return plugins;
             },
