@@ -12,7 +12,7 @@ const path = require('path');
 const mergeWebpack = require('webpack-merge');
 const CONFIG = require('./../../webpack.project');
 
-// Webpack v4: `MiniCssExtractPlugin` replaces `ExtractTextPlugin`
+// Webpack v4: `MiniCssExtractPlugin` replaces `ExtractTextPlugin` and is specific to CSS
 // https://github.com/webpack-contrib/mini-css-extract-plugin
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const extractCSS = new MiniCssExtractPlugin({
@@ -23,7 +23,7 @@ const NODE_MODULES = path.join(__dirname, '../node_modules');
 const IS_PROD = (process.env.NODE_ENV === 'production');
 
 const WEBPACK_DEFAULT = {
-  // Webpack v4: `mode` is required
+  // Webpack v4 requires `mode` to be set
   mode: IS_PROD ? 'production' : 'development',
   stats: {
     children: false
@@ -95,12 +95,6 @@ const WEBPACK_DEFAULT = {
   },
   plugins: [
     extractCSS,
-    // INFO: We only need `LoaderOptionsPlugin` because ESLint doesn't support the `query` option yet.
-    // See: https://github.com/webpack/webpack/issues/6556
-    // TODO: Once ESLint support `query` by default, remove this plugin.
-    new webpack.LoaderOptionsPlugin({
-      options: {}
-    }),
   ],
   resolve: {
     extensions: ['.js', '.scss'],
