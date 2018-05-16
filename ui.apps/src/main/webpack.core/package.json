@@ -1,6 +1,6 @@
 {
   "name": "aem-webpack-example",
-  "version": "2.3.4",
+  "version": "2.4.0",
   "private": true,
   "description": "Core front end setup of a project",
   "scripts": {
@@ -8,10 +8,10 @@
     "build": "webpack --config internals/webpack.config.js",
     "build:debug": "BABEL_DISABLE_CACHE=1 npm run build",
     "build:watch": "npm run build -- --watch",
-    "production": "NODE_ENV=production \"${npm_node_execpath}\" \"${npm_execpath}\" run build -- -p",
-    "postinstall": "\"${npm_node_execpath}\" \"${npm_execpath}\" rebuild node-sass",
+    "production": "cross-env NODE_ENV=production \"${npm_node_execpath}\" \"${npm_execpath}\" run build -- -p",
+    "postinstall": "cross-env \"${npm_node_execpath}\" \"${npm_execpath}\" rebuild node-sass",
     "start": "FORCE_COLOR=1 CI=true concurrently --prefix \"[ {name} ]\"  --names \"AEM Front, Webpack \" --prefix-colors \"white.bgCyan.bold,white.bgGreen.bold\" \"npm run aem:watch\" \"npm run build:watch\" --kill-others",
-    "test": "NODE_ENV=test jest --config internals/jest.config.js",
+    "test": "cross-env NODE_ENV=test jest --config internals/jest.config.js",
     "test:debug": "BABEL_DISABLE_CACHE=1 npm run test -- --no-cache",
     "test:watch": "npm run test -- --watch"
   },
@@ -26,6 +26,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-jest": "^22.4.3",
     "concurrently": "^3.5.1",
+    "cross-env": "^5.1.5",
     "css-loader": "^0.28.11",
     "eslint": "^4.19.1",
     "eslint-loader": "^2.0.0",
