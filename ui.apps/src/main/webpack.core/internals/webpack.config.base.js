@@ -23,9 +23,6 @@ const IS_PROD = (process.env.NODE_ENV === 'production');
 const WEBPACK_CONFIG_BASE = {
   name: 'base',
   mode: IS_PROD ? 'production' : 'development',
-  stats: {
-    children: false
-  },
   module: {
     rules: [{
       test: /\.js$/,
