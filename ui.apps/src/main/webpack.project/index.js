@@ -15,6 +15,16 @@ const AEM = {
  * WEBPACK
  */
 const WEBPACK = {
+  /**
+   * Optional: You can base this config on another Webpack config.
+   * More details: https://github.com/webpack-contrib/config-loader/blob/master/docs/EXTENDS.md
+   * NOTE: We haven't thoroughly tested this feature yet.
+   * It's unclear how other Webpack configs will behave when combined with our base configuration.
+   */
+  // extends: [
+  //   path.join(__dirname, '../webpack.config.shared.js'),
+  // ],
+
   /*
    * Here we can add specify as many entries as we want. One entry results in one output file.
    * The property name ("components") defines how the target file is named, e.g. 'main' results in 'main.bundle.js'.
