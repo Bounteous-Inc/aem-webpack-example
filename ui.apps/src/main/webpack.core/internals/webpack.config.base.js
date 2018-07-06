@@ -29,7 +29,6 @@ const WEBPACK_CONFIG_BASE = {
       exclude: /node_modules/,
       use: [{
         loader: 'babel-loader',
-        // Webpack v4: `query` replaces `options`
         query: require('./babel.config.js'),
       }, {
         loader: 'eslint-loader',
@@ -40,7 +39,7 @@ const WEBPACK_CONFIG_BASE = {
         },
       }],
     }, {
-      // The "?" allows you use both file formats: .css and .scss
+      // The "?" allows you to use both file formats: .css and .scss
       test: /\.s?css$/,
       exclude: /node_modules/,
       use: [
