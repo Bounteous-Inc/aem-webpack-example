@@ -10,4 +10,4 @@ import {
 console.log(helloWorld());
 ```
 
-Only modules that get imported into at least one component-specific JavaScript file are going to be bundled. If a module isn't imported anywhere, it won't be bundled. This behavior is also known as [tree shaking](https://webpack.js.org/guides/tree-shaking/). (Tree shaking only happens if Webpack runs in production mode. Try `npm run deploy`.)
+Only modules that get imported into at least one component-specific JavaScript file are going to be bundled. If a module isn't imported anywhere, it won't be bundled. This behavior is also known as [tree shaking](https://webpack.js.org/guides/tree-shaking/). (Tree shaking only happens if Webpack runs in production mode. Try `npm run production`.)
