@@ -44,7 +44,7 @@ Video summary:
 - See what happens if CSS violates a Stylelint rule
 - See what Autoprefixer does to your CSS
 
-[![Webpack in use](https://www.infielddigital.com/shared/aem-webpack-example-demo-thumbnail.jpg)](https://www.infielddigital.com/shared/aem-webpack-example-demo.mov)
+[![Webpack in use](https://www.infielddigital.com/shared/aem-webpack-example-demo-thumbnail.jpg)](https://www.youtube.com/watch?v=FqrKe6ieyWg)
 
 ## Concepts
 
