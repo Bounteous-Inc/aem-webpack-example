@@ -49,8 +49,8 @@ Video summary:
 ## Concepts
 
 Concept | Description                                                                 
----     | :---
-Unlimited `webpack.module` folders | This is where developers define component-specific JavaScript and SCSS.
+:---    | :---
+One `webpack.module` folder per component | This is where developers define component-specific JavaScript and SCSS.
 One `webpack.core` folder | This is where core tools of this framework are defined. Avoid touching this folder to make future upgrades easier. All you might want to change in this folder is the `package.json` file in order to update NPM dependencies and scripts. We're aware that the configuration isn't ideal and doesn't satisfy everyone's needs, so we encourage you to raise questions and open [issue tickets](https://github.com/infielddigital/aem-webpack-example/issues) for further discussion.
 One `webpack.project` folder | Here lives the configuration for a project, allowing you to override and extend defaults defined in `webpack.core`.
 One `webpack.resolve` folder | Webpack takes this folder and resolves its content for easy imports into JS and SCSS files. See [webpack.resolve](ui.apps/src/main/content/jcr_root/apps/__appsFolderName__/components/webpack.resolve).
