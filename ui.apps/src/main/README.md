@@ -2,7 +2,7 @@
 
 Copy the two Webpack folders into your project:
 
-- `webpack.core` contains basic configurations for npm, Webpack, Babel and Jest. Our goal for further development of this project is to allow you to update this folder without having to manually configure it again. For that reason, since version 2.0.0, we have a second folder...
+- `webpack.core` contains basic configurations for npm, Webpack, Babel and Jest. Our goal for further development of this project is to allow you to update this folder without having to manually configure it again.
 - `webpack.project` is meant to contain your project-specific configuration. It allows you to override and extend certain parts of `webpack.core`. Check out [the folder's index.js](./webpack.project/index.js) for more details.
 
 # .gitignore
