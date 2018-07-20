@@ -36,6 +36,16 @@ const WEBPACK_CONFIG_BASE = {
           configFile: path.resolve(__dirname, './eslint.config.js'),
           // This option makes ESLint automatically fix minor issues
           fix: !IS_PROD,
+          formatter: function(results) {
+            if (!IS_PROD) {
+              const output = require('eslint/lib/formatters/stylish')(results);
+              // WORKAROUND because webpack-command's formatter doesn't format ESLint & Stylelint
+              // errors well. Similar to https://github.com/webpack-contrib/webpack-stylish/issues/22
+              console.log(output);
+            }
+
+            return '';
+          },
         },
       }],
     }, {
