@@ -22,7 +22,7 @@ In order to run Webpack as part of your Maven build process, Eirik's [frontend-m
               <goal>install-node-and-npm</goal>
           </goals>
           <configuration>
-              <nodeVersion>v8.11.3</nodeVersion>
+              <nodeVersion>v8.11.4</nodeVersion>
           </configuration>
       </execution>
 
