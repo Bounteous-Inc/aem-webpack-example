@@ -157,6 +157,45 @@
     </build>
 
     <!-- ====================================================================== -->
+    <!-- P R O F I L E S                                                        -->
+    <!-- ====================================================================== -->
+    <profiles>
+
+        <!-- Skip Front End Build -->
+        <profile>
+            <id>no-frontend</id>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>com.github.eirslett</groupId>
+                            <artifactId>frontend-maven-plugin</artifactId>
+                            <version>*</version>
+
+                            <executions>
+                                <execution>
+                                    <id>install node and npm</id>
+                                    <phase>none</phase>
+                                </execution>
+
+                                <execution>
+                                    <id>npm install</id>
+                                    <phase>none</phase>
+                                </execution>
+
+                                <execution>
+                                    <id>npm production</id>
+                                    <phase>none</phase>
+                                </execution>
+                            </executions>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+            </build>
+        </profile>
+    </profiles>
+
+    <!-- ====================================================================== -->
     <!-- D E P E N D E N C I E S                                                -->
     <!-- ====================================================================== -->
     <dependencies>
