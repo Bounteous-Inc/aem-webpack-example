@@ -28,7 +28,7 @@ Before you start, you might want to read the blog post "[How does Webpack fit in
 
 The structure of this project mirrors Adobe's [Project Archetype](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype/tree/master/src/main/archetype). To get started, you can either [set up a new project](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype) using the archetype, or you use your existing project. Then follow the step-by-step summary below. Each step links to a folder containing a **README** file with more instructions. Make sure you read those for detailed instructions of each aspect.
 
-1. [Copy the example Webpack folder, .babelrc and .gitignore](ui.apps/src/main) to `ui.apps/src/main`.
+1. [Copy the example Webpack folder, .browserslistrc and .gitignore](ui.apps/src/main) to `ui.apps/src/main`.
 2. [Extend your project's pom.xml](ui.apps).
 
 This is already enough to run the project's Maven build and Webpack. Try it now! Then you want to modify a few more things:
