@@ -8,8 +8,6 @@ AEM might be the best system for content and user experience management. It prov
 
 However, your front end developers are probably not happy with it and waste precious time. Why? AEM's out-of-the-box tools can't keep up with the rapid advances in the front end world.
 
-![Front end development in AEM](https://i.imgur.com/vKwoLvU.jpg)
-
 **Webpack in AEM improves front end development because...**
 
 - It allows using the latest JavaScript standards _without_ breaking clientlibs and AEM's built-in compression libraries.
