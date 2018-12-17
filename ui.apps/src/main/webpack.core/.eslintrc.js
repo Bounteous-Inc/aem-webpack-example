@@ -1,14 +1,14 @@
 const CONFIG_WEBPACK = require('./internals/webpack.config.js');
 
 module.exports = {
+  // Optional: Replace `eslint:recommended` with `eslint-config-infield` and run
+  // `npm install --save-dev eslint-config-infield` for stricter linting rules
+  extends: "eslint:recommended",
   env: {
     browser: true,
     es6: true,
     node: true,
   },
-  // Optional: Replace `eslint:recommended` with `eslint-config-infield` and run
-  // `npm install --save-dev eslint-config-infield` for stricter linting rules
-  extends: "eslint:recommended",
   parserOptions: {
     ecmaVersion: 8,
     sourceType: 'module',
