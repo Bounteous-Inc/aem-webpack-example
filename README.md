@@ -1,6 +1,6 @@
 # AEM Webpack Example
 
-This project demonstrates a proven practice for setting up Webpack in AEM. It provides a straightforward Webpack configuration that supports Babel, JavaScript and CSS linting, and JavaScript testing. It is part of the setup [Infield Digital](http://www.infielddigital.com/) introduced to some major AEM customers.
+This project demonstrates a proven practice for setting up Webpack in AEM. It provides a straightforward Webpack configuration that supports Babel, JavaScript and CSS linting, and JavaScript testing. It is part of the setup [Bounteous](https://www.bounteous.com/) introduced to some major AEM customers.
 
 ## Why Webpack in AEM?
 
@@ -22,7 +22,7 @@ However, your front end developers are probably not happy with it and waste prec
 
 ## Integrate Webpack into AEM
 
-Before you start, you might want to read the blog post "[How does Webpack fit into AEM?](https://www.infielddigital.com/blog/webpack-in-aem/)" to get a general idea of some concepts that are implemented in AEM Webpack Example.
+Before you start, you might want to read the blog post "[How does Webpack fit into AEM?](https://www.bounteous.com/insights/2017/08/02/webpack-in-aem/)" to get a general idea of some concepts that are implemented in AEM Webpack Example.
 
 The structure of this project mirrors Adobe's [Project Archetype](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype/tree/master/src/main/archetype). To get started, you can either [set up a new project](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype) using the archetype, or you use your existing project. Then follow the step-by-step summary below. Each step links to a folder containing a **README** file with more instructions. Make sure you read those for detailed instructions of each aspect.
 
@@ -47,7 +47,7 @@ Video summary:
 
 ## Concepts
 
-Concept | Description                                                                 
+Concept | Description
 :---    | :---
 One `webpack.module` folder per component | This is where developers define component-specific JavaScript and SCSS.
 One `webpack.core` folder | This is where core tools of this framework are defined. Avoid touching this folder to make future upgrades easier. All you might want to change in this folder is the `package.json` file in order to update NPM dependencies and scripts. We're aware that the configuration isn't ideal and doesn't satisfy everyone's needs, so we encourage you to raise questions and open [issue tickets](https://github.com/infielddigital/aem-webpack-example/issues) for further discussion.
@@ -71,10 +71,10 @@ AEM Webpack Example supports the following tools out-of-the-box:
 
 ## Who we are
 
-> Infield Digital is a consultancy that helps brands deliver rich, relevant customer experiences.
+> Bounteous creates big-picture digital solutions that help leading companies deliver transformational brand experiences.
 
-With offices in San Francisco and Denver, we provide Customer Experience Management (CXM) solutions that integrate with existing data and systems. As certified Adobe, Magento and Elastic Path Business Partners, we engineer modern digital marketing solutions on a foundation of data and engineering.
+Founded in 2003 in Chicago, Bounteous creates big-picture digital solutions that help leading companies deliver transformational brand experiences. Our expertise includes Strategy, Experience Design, Technology, Analytics and Insight, and Marketing. Bounteous forms problem-solving partnerships with our clients to envision, design, and build their digital futures.
 
-[We're hiring!](https://www.infielddigital.com/careers/)
+[We're hiring!](https://www.bounteous.com/careers/)
 
-And we are the AEM and front end experts you've been looking for. [Meet us](https://www.infielddigital.com/).
+And we are the AEM and front end experts you've been looking for. [Meet us](https://www.bounteous.com/).
