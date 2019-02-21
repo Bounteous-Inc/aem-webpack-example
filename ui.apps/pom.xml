@@ -101,7 +101,7 @@
                         </goals>
                         <configuration>
                             <nodeVersion>v10.14.2</nodeVersion>
-                            <npmVersion>v6.4.1</npmVersion>
+                            <npmVersion>6.4.1</npmVersion>
                         </configuration>
                     </execution>
 
