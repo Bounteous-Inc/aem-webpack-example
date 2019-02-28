@@ -101,6 +101,7 @@
                         </goals>
                         <configuration>
                             <nodeVersion>v10.14.2</nodeVersion>
+                            <npmVersion>6.4.1</npmVersion>
                         </configuration>
                     </execution>
 
