@@ -58,6 +58,10 @@ const ESLINT = {
 
   rules: {
     "no-console": "off",
+    options: {
+      emitError: true,
+      emitWarning: true
+    }
   },
 };
 
